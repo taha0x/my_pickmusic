@@ -1,25 +1,14 @@
-// انتخاب عناصر
+// انتخاب عناصر DOM
 const audioPlayer = document.getElementById("audioPlayer");
-const playPauseBtn = document.getElementById("playPauseBtn");
-const progressBar = document.getElementById("progressBar");
+const audioSource = document.getElementById("audioSource");
+const playlistItems = document.querySelectorAll(".playlist li");
 
-// وضعیت پخش
-let isPlaying = false;
-
-// توابع کنترل پخش
-playPauseBtn.addEventListener("click", () => {
-  if (isPlaying) {
-    audioPlayer.pause();
-    playPauseBtn.textContent = "▶️";
-  } else {
+// اضافه کردن رویداد کلیک به هر آیتم لیست
+playlistItems.forEach((item) => {
+  item.addEventListener("click", () => {
+    const song = item.getAttribute("data-song");
+    audioSource.src = `music/${song}`;
+    audioPlayer.load();
     audioPlayer.play();
-    playPauseBtn.textContent = "⏸️";
-  }
-  isPlaying = !isPlaying;
-});
-
-// به‌روزرسانی نوار پیشرفت
-audioPlayer.addEventListener("timeupdate", () => {
-  const progress = (audioPlayer.currentTime / audioPlayer.duration) * 100;
-  progressBar.style.setProperty("--progress", `${progress}%`);
+  });
 });
