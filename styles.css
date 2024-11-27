@@ -78,7 +78,7 @@ h1 {
 }
 
 audio {
-  width: 85%;
+  width: 100%;
   outline: none;
 }
 
@@ -97,7 +97,7 @@ footer {
   }
 
   .playlist, .player {
-    width: 90%;
+    width: 100%;
   }
 
   h1 {
