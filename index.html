@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>سایت موسیقی شخصی</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <h1>سایت موسیقی شخصی من</h1>
+  </header>
+
+  <main class="container">
+    <aside class="playlist">
+      <h2>لیست آهنگ‌ها</h2>
+      <ul>
+        <li data-song="song1.mp3">آهنگ ۱</li>
+        <li data-song="song2.mp3">آهنگ ۲</li>
+        <li data-song="song3.mp3">آهنگ ۳</li>
+        <li data-song="song4.mp3">آهنگ ۴</li>
+        <li data-song="song5.mp3">آهنگ ۵</li>
+      </ul>
+    </aside>
+
+    <section class="player">
+      <h2>پخش‌کننده</h2>
+      <audio id="audioPlayer" controls>
+        <source id="audioSource" src="music/song1.mp3" type="audio/mpeg">
+        مرورگر شما از پخش موسیقی پشتیبانی نمی‌کند.
+      </audio>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2024 سایت موسیقی شخصی</p>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
